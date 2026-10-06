@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedro Joaquin Vilches · Editor de video</title>
+  <meta name="description" content="Pedro Joaquin Vilches, editor de video en Buenos Aires. Contenido para clínicas, YouTube y podcasts, real estate y música electrónica. Estudio West Visual.">
+  <meta property="og:title" content="Pedro Joaquin Vilches · Editor de video">
+  <meta property="og:description" content="Edición de video para creadores, podcasts, real estate, clínicas y música electrónica.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a1330">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#trabajo">Saltar al trabajo</a>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio">Pedro Joaquin Vilches</a>
+    <nav aria-label="Secciones">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a class="nav-cta" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <span class="eyebrow">Editor de video · Buenos Aires</span>
+        <h1>Pedro Joaquin<br>Vilches</h1>
+        <p class="lede">Edito video para que tu contenido se vea y se escuche como vos querés: piezas largas, clips y reels para creadores, podcasts, inmobiliarias, clínicas y artistas de música electrónica.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contacto">Escribime</a>
+          <a class="btn" href="#trabajo">Ver trabajo</a>
+        </div>
+        <span class="studio">Estudio <b>West Visual</b></span>
+      </div>
+      <div class="hero-reel">
+        <!-- Reel general: pegar en data-src un link de YouTube, Vimeo o Google Drive -->
+        <div class="video" data-src="" data-title="Reel general"></div>
+        <span class="tc">REEL · 00:00:00:00</span>
+      </div>
+    </section>
+
+    <!-- TRABAJO POR NICHO -->
+    <section class="block" id="trabajo">
+      <div class="sec-head">
+        <span class="eyebrow">01 · Trabajo</span>
+        <h2>Lo que edito</h2>
+        <p class="muted">El trabajo ordenado por tipo de cliente, para que veas directamente lo que se parece a lo tuyo.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Nichos">
+        <button role="tab" aria-selected="true" aria-controls="n-podcasts" id="t-podcasts">YouTube y podcasts</button>
+        <button role="tab" aria-selected="false" aria-controls="n-realestate" id="t-realestate" tabindex="-1">Real estate</button>
+        <button role="tab" aria-selected="false" aria-controls="n-clinicas" id="t-clinicas" tabindex="-1">Clínicas y salud</button>
+        <button role="tab" aria-selected="false" aria-controls="n-musica" id="t-musica" tabindex="-1">Música electrónica</button>
+      </div>
+
+      <article class="niche" id="n-podcasts" role="tabpanel" aria-labelledby="t-podcasts">
+        <div class="niche-head">
+          <h3>YouTube y podcasts</h3>
+          <p>Episodios completos, cortes para redes y clips de streaming. Ritmo, sonido limpio y subtítulos que se leen en el celular.</p>
+          <ul class="tags"><li>Episodios largos</li><li>Clips verticales</li><li>Clipping de streaming</li><li>Subtítulos</li></ul>
+        </div>
+        <div class="grid">
+          <div class="video" data-src="" data-title="Podcast · episodio"></div>
+          <div class="video vertical" data-src="" data-title="Podcast · clip"></div>
+          <div class="video vertical" data-src="" data-title="Streaming · clip"></div>
+        </div>
+      </article>
+
+      <article class="niche" id="n-realestate" role="tabpanel" aria-labelledby="t-realestate" hidden>
+        <div class="niche-head">
+          <h3>Real estate</h3>
+          <p>Reels de venta y recorridos de propiedades pensados para que la gente pare de scrollear y pida la visita.</p>
+          <ul class="tags"><li>Reels de venta</li><li>Recorridos</li><li>Contenido de agentes</li></ul>
+        </div>
+        <div class="grid">
+          <div class="video vertical" data-src="" data-title="Propiedad · reel"></div>
+          <div class="video vertical" data-src="" data-title="Propiedad · reel"></div>
+          <div class="video vertical" data-src="" data-title="Agente · reel"></div>
+        </div>
+      </article>
+
+      <article class="niche" id="n-clinicas" role="tabpanel" aria-labelledby="t-clinicas" hidden>
+        <div class="niche-head">
+          <h3>Clínicas y salud</h3>
+          <p>Contenido para clínicas y profesionales de la salud: explicativos, testimonios y piezas para redes, con un tono claro y confiable.</p>
+          <ul class="tags"><li>Reels educativos</li><li>Testimonios</li><li>Piezas para redes</li></ul>
+        </div>
+        <div class="grid">
+          <div class="video vertical" data-src="" data-title="Clínica · reel"></div>
+          <div class="video vertical" data-src="" data-title="Clínica · reel"></div>
+          <div class="video vertical" data-src="" data-title="Clínica · reel"></div>
+        </div>
+      </article>
+
+      <article class="niche" id="n-musica" role="tabpanel" aria-labelledby="t-musica" hidden>
+        <div class="niche-head">
+          <h3>Música electrónica</h3>
+          <p>Aftermovies, recaps de fechas y contenido para DJs, promotores y creadores de la escena.</p>
+          <ul class="tags"><li>Aftermovies</li><li>Recaps de eventos</li><li>Contenido de DJs</li></ul>
+        </div>
+        <div class="grid">
+          <div class="video" data-src="" data-title="Evento · aftermovie"></div>
+          <div class="video vertical" data-src="" data-title="DJ · reel"></div>
+          <div class="video vertical" data-src="" data-title="Evento · recap"></div>
+        </div>
+      </article>
+
+      <p class="also muted">También edito contenido para radio deportiva y gimnasios.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="block" id="servicios">
+      <div class="sec-head">
+        <span class="eyebrow">02 · Servicios</span>
+        <h2>Cómo puedo ayudarte</h2>
+      </div>
+      <ol class="services">
+        <li>
+          <span class="tc">00:00:01:00</span>
+          <div>
+            <h3>Edición de piezas largas</h3>
+            <p>Videos de YouTube, episodios de podcast y aftermovies. Estructura, ritmo, color y sonido.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tc">00:00:02:00</span>
+          <div>
+            <h3>Reels y clips para redes</h3>
+            <p>Formatos verticales con subtítulos, ganchos al inicio y versiones para cada plataforma.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tc">00:00:03:00</span>
+          <div>
+            <h3>Contenido recurrente</h3>
+            <p>Un flujo mensual para marcas, clínicas o creadores que publican seguido y necesitan constancia.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tc">00:00:04:00</span>
+          <div>
+            <h3>Flujos con IA</h3>
+            <p>Uso herramientas de inteligencia artificial para subtitular, recortar y versionar más rápido, sin perder el criterio de edición.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="block about" id="sobre-mi">
+      <div class="sec-head">
+        <span class="eyebrow">03 · Sobre mí</span>
+        <h2>Hola, soy Pedro</h2>
+      </div>
+      <div class="about-body">
+        <div class="portrait" aria-label="Foto de Pedro (pendiente)">
+          <!-- Reemplazar por <img src="assets/pedro.jpg" alt="Pedro Joaquin Vilches"> -->
+          <span>FOTO</span>
+        </div>
+        <div class="about-text">
+          <p>Soy editor de video. Estudié diseño multimedia y hace varios años que edito para empresas de streaming, inmobiliarias, gimnasios y agencias de contenido para clínicas.</p>
+          <p>Hoy trabajo con podcasts, clipping de streaming, reels de venta inmobiliaria y contenido para radio deportiva. Además me estoy especializando en inteligencia artificial aplicada a la producción de video.</p>
+          <p>West Visual es mi estudio de diseño, el sello con el que firmo mis trabajos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="block contact" id="contacto">
+      <div class="sec-head">
+        <span class="eyebrow">04 · Contacto</span>
+        <h2>Hablemos de tu proyecto</h2>
+        <p class="muted">Contame qué querés hacer y te respondo con una propuesta.</p>
+      </div>
+      <!-- Completar los links: mail, WhatsApp (formato https://wa.me/549XXXXXXXXXX), LinkedIn, Instagram y Discord -->
+      <ul class="contact-list">
+        <li><a href="mailto:hola@ejemplo.com" data-todo><span class="k">Mail</span><span class="v">hola@ejemplo.com</span></a></li>
+        <li><a href="#" data-todo><span class="k">WhatsApp</span><span class="v">+54 9 · pendiente</span></a></li>
+        <li><a href="#" data-todo><span class="k">LinkedIn</span><span class="v">Pedro Joaquin Vilches</span></a></li>
+        <li><a href="#" data-todo><span class="k">Instagram</span><span class="v">@usuario</span></a></li>
+        <li><a href="#" data-todo><span class="k">Discord</span><span class="v">usuario</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="seal">
+      <svg viewBox="0 0 100 120" width="20" height="24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0H38L50 36L62 0H100L60 120H40ZM50 46L57 70L50 94L43 70Z"/></svg>
+      <span>West Visual</span>
+    </div>
+    <span class="muted">© <span id="year">2026</span> Pedro Joaquin Vilches · Buenos Aires</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
