@@ -7,7 +7,7 @@ Es un sitio estático (HTML, CSS y JS, sin build), listo para publicar en GitHub
 ## Archivos
 
 - `index.html`: contenido y textos.
-- `styles.css`: diseño, con la paleta del logo de West Visual.
+- `styles.css`: diseño estilo Apple, negro como primario y azul como secundario.
 - `main.js`: reproductores de video y pestañas de nichos.
 - `assets/`: logo y favicon.
 

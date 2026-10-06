@@ -45,7 +45,7 @@ document.querySelectorAll(".video").forEach((el) => {
   const embed = el.dataset.src && embedFor(el.dataset.src.trim());
 
   if (!embed) {
-    el.innerHTML = `<div class="slot"><span class="label"></span><span class="rec">PIEZA PENDIENTE</span></div>`;
+    el.innerHTML = `<div class="slot"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="label"></span><span class="state">Pieza pendiente</span></div>`;
     el.querySelector(".label").textContent = title;
     return;
   }
@@ -61,7 +61,7 @@ document.querySelectorAll(".video").forEach((el) => {
     btn.className = "play";
     btn.type = "button";
     btn.setAttribute("aria-label", `Reproducir: ${title}`);
-    btn.innerHTML = `<span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>`;
+    btn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>`;
     btn.addEventListener("click", () => el.replaceChildren(iframe(embed.iframe, title)), { once: true });
     el.append(img, btn);
   } else {
