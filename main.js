@@ -19,6 +19,7 @@ function embedFor(src) {
     return id[1] && {
       iframe: `https://drive.google.com/file/d/${id[1]}/preview`,
       thumb: `https://drive.google.com/thumbnail?id=${id[1]}&sz=w1000`,
+      open: `https://drive.google.com/file/d/${id[1]}/view`,
       clickToLoad: true,
     };
   }
@@ -42,6 +43,17 @@ function iframe(src, title) {
   f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
   f.allowFullscreen = true;
   return f;
+}
+
+function openLink(href, title) {
+  const a = document.createElement("a");
+  a.className = "open";
+  a.href = href;
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.textContent = "Abrir ↗";
+  a.setAttribute("aria-label", `Abrir en Drive: ${title}`);
+  return a;
 }
 
 document.querySelectorAll(".video").forEach((el) => {
@@ -68,8 +80,13 @@ document.querySelectorAll(".video").forEach((el) => {
     btn.setAttribute("aria-label", `Reproducir: ${title}`);
     btn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><em></em>`;
     btn.querySelector("em").textContent = title;
-    btn.addEventListener("click", () => el.replaceChildren(iframe(embed.iframe, title)), { once: true });
-    el.append(img, btn);
+    btn.addEventListener("click", () => {
+      el.replaceChildren(iframe(embed.iframe, title));
+      if (link) el.append(link);
+    }, { once: true });
+    // Respaldo: si el reproductor embebido no carga, el video se abre en Drive
+    const link = embed.open && openLink(embed.open, title);
+    el.append(img, btn, ...(link ? [link] : []));
   } else {
     el.append(iframe(embed.iframe, title));
   }
