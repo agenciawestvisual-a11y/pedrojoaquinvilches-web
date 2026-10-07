@@ -1,6 +1,8 @@
 // Videos: cada <div class="video" data-src="..."> acepta un link de YouTube, Vimeo o Google Drive.
 // Sin link, muestra un marco "pendiente" para saber qué espacio falta completar.
 function embedFor(src) {
+  // Archivo de video propio (por ejemplo videos/reel.mp4)
+  if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) return { file: src };
   let url;
   try { url = new URL(src); } catch { return null; }
   const host = url.hostname.replace(/^www\.|^m\./, "");
@@ -63,6 +65,18 @@ document.querySelectorAll(".video").forEach((el) => {
   if (!embed) {
     el.innerHTML = `<div class="slot"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="label"></span><span class="state">Pieza pendiente</span></div>`;
     el.querySelector(".label").textContent = title;
+    return;
+  }
+
+  if (embed.file) {
+    const v = document.createElement("video");
+    v.src = embed.file;
+    v.controls = true;
+    v.playsInline = true;
+    v.preload = "metadata";
+    if (el.dataset.poster) v.poster = el.dataset.poster;
+    v.setAttribute("aria-label", title);
+    el.append(v);
     return;
   }
 

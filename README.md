@@ -19,8 +19,8 @@ Cada espacio de video en `index.html` es un `<div class="video" data-src="">`. P
 <div class="video vertical" data-src="https://youtube.com/shorts/XXXXXXXX" data-title="Propiedad · reel"></div>
 ```
 
-- Sirven links de YouTube (normales, Shorts o youtu.be), Vimeo y Google Drive.
-- En Drive, el archivo tiene que estar compartido como "Cualquier persona con el enlace".
+- Sirven links de YouTube (normales, Shorts o youtu.be) y Vimeo, o un archivo propio (`videos/reel.mp4`, con portada opcional en `data-poster`).
+- Google Drive no sirve para la web: a quien no tiene sesión de Google no le reproduce el video. Recomendado: YouTube como "no listado".
 - `vertical` es para reels (9:16); sin esa clase el marco es horizontal (16:9).
 - Si `data-src` queda vacío, se ve el marco "PIEZA PENDIENTE".
 
