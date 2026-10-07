@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedro Joaquin Vilches · Editor de video</title>
+  <meta name="description" content="Pedro Joaquin Vilches, editor de video en Buenos Aires. Contenido para clínicas, YouTube y podcasts, real estate y música electrónica. Estudio West Visual.">
+  <meta property="og:title" content="Pedro Joaquin Vilches · Editor de video">
+  <meta property="og:description" content="Edición de video para creadores, podcasts, real estate, clínicas y música electrónica.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#trabajo">Saltar al trabajo</a>
+
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="#inicio">Pedro Joaquin Vilches</a>
+      <nav aria-label="Secciones">
+        <a href="#trabajo">Trabajo</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a class="btn primary small" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <p class="eyebrow">Editor de video · Buenos Aires</p>
+      <h1>Pedro Joaquin Vilches</h1>
+      <p class="lede">Piezas largas, clips y reels para creadores, podcasts, inmobiliarias, clínicas y artistas de música electrónica.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contacto">Escribime</a>
+        <a class="link" href="#trabajo">Ver trabajo</a>
+      </div>
+      <!-- Video principal: link de YouTube, Vimeo o Google Drive en data-src -->
+      <div class="video hero-reel" data-src="https://drive.google.com/file/d/1gH_T4c-_vSy0T5DtGFVVBBhrgz9arpNd/view" data-title="Intro de podcast"></div>
+    </section>
+
+    <!-- TRABAJO POR NICHO -->
+    <section class="block" id="trabajo">
+      <div class="sec-head">
+        <p class="eyebrow">Trabajo</p>
+        <h2>Lo que edito.</h2>
+        <p class="sub">Ordenado por tipo de cliente, para que veas directamente lo que se parece a lo tuyo.</p>
+      </div>
+
+      <div class="segmented" role="tablist" aria-label="Nichos">
+        <button role="tab" aria-selected="true" aria-controls="n-podcasts" id="t-podcasts">Podcasts y streaming</button>
+        <button role="tab" aria-selected="false" aria-controls="n-clinicas" id="t-clinicas" tabindex="-1">Clínicas</button>
+        <button role="tab" aria-selected="false" aria-controls="n-realestate" id="t-realestate" tabindex="-1">Real estate</button>
+        <button role="tab" aria-selected="false" aria-controls="n-musica" id="t-musica" tabindex="-1">Música electrónica</button>
+        <button role="tab" aria-selected="false" aria-controls="n-deportes" id="t-deportes" tabindex="-1">Deportes</button>
+        <button role="tab" aria-selected="false" aria-controls="n-ia" id="t-ia" tabindex="-1">IA</button>
+      </div>
+
+      <article class="niche" id="n-podcasts" role="tabpanel" aria-labelledby="t-podcasts">
+        <div class="niche-head">
+          <h3>Podcasts y streaming</h3>
+          <p>Intros de podcast con ritmo de tráiler y clips de streams listos para redes.</p>
+        </div>
+          <div class="group">
+            <h4>Intros de podcast</h4>
+            <div class="row-h">
+              <div class="video wide" data-src="https://drive.google.com/file/d/1gH_T4c-_vSy0T5DtGFVVBBhrgz9arpNd/view" data-title="Intro de podcast"></div>
+              <div class="video wide" data-src="https://drive.google.com/file/d/1-TPn1fPJ9lk1rHesJwqY2m-Bkv3f_a6K/view" data-title="Intro de podcast"></div>
+            </div>
+          </div>
+          <div class="group">
+            <h4>Clipping de streams</h4>
+            <div class="row-v" data-limit="4">
+              <div class="video vertical" data-src="https://drive.google.com/file/d/16ZbjlV7mAaAqS4gEHO2HlUXiBFB3aLYD/view" data-title="Clip de stream"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1IOYUYSh4pY3R59jcm-LxeFtsyp8bMAAU/view" data-title="Clip de stream"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1F_vg-X5uvfLoOOCcPyMtKIfzIu0GGDO5/view" data-title="Clip de stream"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1-cLMNOiL-4lNAhfrO5TQfsrV8sC4CrJW/view" data-title="Clip de stream"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1PR2Z_x3x0-FUvHD87NlpPYSmq7hOQuoQ/view" data-title="Clip de stream"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1R7wIy1FLkukAhZjM3BWpqQCvCKGhB5KM/view" data-title="Clip de stream"></div>
+            </div>
+          </div>
+      </article>
+      <article class="niche" id="n-clinicas" role="tabpanel" aria-labelledby="t-clinicas" hidden>
+        <div class="niche-head">
+          <h3>Clínicas y salud</h3>
+          <p>Reels de venta para clínicas: piezas cortas para anuncios en Meta y TikTok, pensadas para convertir.</p>
+        </div>
+          <div class="group">
+            <div class="row-v" data-limit="8">
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1rZq8SWYecvvmAZQjjw5TFvuz_H7GuSDU/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1GvcJlhR374VJMFK2qti7ugKU27KYIyHG/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1o2CNFwFYSxrBzBwUjv6PGaZXXPasONsj/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/189x_BK7hHsjuMaP64mwZgiNl28GRAZ7G/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1ilS1nEYVp3R-I5Be_o1xfOUGVqnc3Lz8/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1CUPdbG-tOq9DaAfRYiXeL77iPSC_Vd0M/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1Q32j43jhGVEahrcNaihzjky1rM4wBpzl/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1k9C-JHOE6R0UnxnQkBzX-j7qEEwCIkrD/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/10e0Hivtg6QrztbYFwI2m44-WwdrByP1z/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1lVJT3UueiVsHY9vlJTdCI0BmqGXooW-c/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1axo110uBw4VbnhaqPJ9jBh6UC57dW9kD/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/10apbRzZif0WKhzCxjQBQGmivim2wQea_/view" data-title="Reel de venta"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1k8jgxVEWR7PIn3r0EOwVjiE6uGGq4bbE/view" data-title="Reel de venta"></div>
+            </div>
+          </div>
+      </article>
+      <article class="niche" id="n-realestate" role="tabpanel" aria-labelledby="t-realestate" hidden>
+        <div class="niche-head">
+          <h3>Real estate</h3>
+          <p>Montajes y reels de propiedades pensados para que la gente pare de scrollear y pida la visita.</p>
+        </div>
+          <div class="group">
+            <div class="row-h">
+              <div class="video wide" data-src="https://drive.google.com/file/d/10X2m9sFGUv8pkKa18clOwMde_p-JtV8O/view" data-title="Propiedad"></div>
+              <div class="video wide" data-src="https://drive.google.com/file/d/1iuJav5ail5_1WgD5ZRBNTxD_ehNb7iX-/view" data-title="Video para YouTube"></div>
+            </div>
+            <div class="row-v">
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1-Gm_h5Cd-JOnLUrE5ATqwRCV0ldRQAv5/view" data-title="Reel branded"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1bN6PMPi86cfks_5aNBgVUg6mqDaimmOw/view" data-title="Reel"></div>
+            </div>
+          </div>
+      </article>
+      <article class="niche" id="n-musica" role="tabpanel" aria-labelledby="t-musica" hidden>
+        <div class="niche-head">
+          <h3>Música electrónica</h3>
+          <p>Aftermovies, piezas de eventos y contenido para la escena electrónica.</p>
+        </div>
+          <div class="group">
+            <div class="row-h">
+              <div class="video wide" data-src="https://drive.google.com/file/d/1-qmLcmD7hXe6VhyviuzoWM-1TtC6thKB/view" data-title="Tomorrowland 2018"></div>
+            </div>
+            <div class="row-v">
+              <div class="video vertical" data-src="https://drive.google.com/file/d/111gjVHCvnqvqG-4ZmemVENjL2mv2jlfG/view" data-title="Full Arena"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1a7zdXRTgam_7IH4AHL4I2UpBTyfPv7wK/view" data-title="Full Arena · animación"></div>
+              <div class="video vertical" data-src="https://drive.google.com/file/d/1ehRSXKZxSxkInij4viLeDcLb_I-Vbn74/view" data-title="Electronic Music BA"></div>
+            </div>
+          </div>
+      </article>
+      <article class="niche" id="n-deportes" role="tabpanel" aria-labelledby="t-deportes" hidden>
+        <div class="niche-head">
+          <h3>Deportes</h3>
+          <p>Spots y resúmenes deportivos con el pulso de la transmisión.</p>
+        </div>
+          <div class="group">
+            <div class="row-h">
+              <div class="video wide" data-src="https://drive.google.com/file/d/1Ek_lkqTI5NYSIqg-stFH0s_EQ1J6_07m/view" data-title="Euroliga"></div>
+              <div class="video wide" data-src="https://drive.google.com/file/d/1IOcvAxzYSio_wOkxpyXCrnRGjRgKzsH8/view" data-title="Final Euroliga"></div>
+              <div class="video wide" data-src="https://drive.google.com/file/d/1PuOQ-AQ_ki3TL4E1KXropAxqwMVZa5_-/view" data-title="Super 20 · Gobierno de Jujuy"></div>
+            </div>
+          </div>
+      </article>
+      <article class="niche" id="n-ia" role="tabpanel" aria-labelledby="t-ia" hidden>
+        <div class="niche-head">
+          <h3>Video con IA</h3>
+          <p>Piezas generadas con inteligencia artificial. Este institucional está hecho 100% con IA, con Seedance 2.0.</p>
+        </div>
+          <div class="group">
+            <div class="row-h">
+              <div class="video wide" data-src="https://drive.google.com/file/d/1204Qi9qZ2onC78rv1dNLp2Ke93lE1JLy/view" data-title="Institucional 100% IA"></div>
+            </div>
+          </div>
+      </article>
+
+      <p class="also">También edito contenido para radio deportiva y gimnasios.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="block" id="servicios">
+      <div class="sec-head">
+        <p class="eyebrow">Servicios</p>
+        <h2>Cómo puedo ayudarte.</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Edición de piezas largas</h3>
+          <p>Intros y episodios de podcast, videos de YouTube y aftermovies. Estructura, ritmo, color y sonido.</p>
+        </div>
+        <div class="card">
+          <h3>Reels y clips para redes</h3>
+          <p>Formatos verticales con subtítulos, ganchos al inicio y versiones para cada plataforma.</p>
+        </div>
+        <div class="card">
+          <h3>Contenido recurrente</h3>
+          <p>Un flujo mensual para marcas, clínicas o creadores que publican seguido y necesitan constancia.</p>
+        </div>
+        <div class="card accent">
+          <h3>Flujos con IA</h3>
+          <p>Genero video con IA, como Seedance 2.0, y la uso para subtitular, recortar y versionar más rápido sin perder el criterio de edición.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="block" id="sobre-mi">
+      <div class="about card">
+        <div class="portrait" role="img" aria-label="Foto de Pedro (pendiente)">
+          <!-- Reemplazar por <img src="assets/pedro.jpg" alt="Pedro Joaquin Vilches"> -->
+          <span>Foto</span>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Sobre mí</p>
+          <h2>Hola, soy Pedro.</h2>
+          <p>Soy editor de video. Estudié diseño multimedia y hace varios años que edito para empresas de streaming, inmobiliarias, gimnasios y agencias de contenido para clínicas.</p>
+          <p>Hoy trabajo con podcasts, clipping de streaming, reels de venta inmobiliaria y contenido para radio deportiva. Además me estoy especializando en inteligencia artificial aplicada a la producción de video.</p>
+          <p class="muted">West Visual es mi estudio de diseño, el sello con el que firmo mis trabajos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="block contact" id="contacto">
+      <div class="sec-head center">
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos de tu proyecto.</h2>
+        <p class="sub">Contame qué querés hacer y te respondo con una propuesta.</p>
+      </div>
+      <!-- Completar los links: mail, WhatsApp (formato https://wa.me/549XXXXXXXXXX), LinkedIn, Instagram y Discord -->
+      <ul class="list">
+        <li><a href="mailto:hola@ejemplo.com"><span class="k">Mail</span><span class="v">hola@ejemplo.com</span></a></li>
+        <li><a href="#"><span class="k">WhatsApp</span><span class="v">Pendiente</span></a></li>
+        <li><a href="#"><span class="k">LinkedIn</span><span class="v">Pedro Joaquin Vilches</span></a></li>
+        <li><a href="#"><span class="k">Instagram</span><span class="v">@usuario</span></a></li>
+        <li><a href="#"><span class="k">Discord</span><span class="v">usuario</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-in">
+      <div class="seal">
+        <svg viewBox="0 0 100 120" width="14" height="17" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0H38L50 36L62 0H100L60 120H40ZM50 46L57 70L50 94L43 70Z"/></svg>
+        <span>West Visual</span>
+      </div>
+      <span>© <span id="year">2026</span> Pedro Joaquin Vilches · Buenos Aires</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
