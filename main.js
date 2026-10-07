@@ -16,7 +16,11 @@ function embedFor(src) {
   }
   if (host === "drive.google.com") {
     const id = url.pathname.match(/\/file\/d\/([\w-]+)/) || [null, url.searchParams.get("id")];
-    return id[1] && { iframe: `https://drive.google.com/file/d/${id[1]}/preview` };
+    return id[1] && {
+      iframe: `https://drive.google.com/file/d/${id[1]}/preview`,
+      thumb: `https://drive.google.com/thumbnail?id=${id[1]}&sz=w1000`,
+      clickToLoad: true,
+    };
   }
   return null;
 }
@@ -57,16 +61,34 @@ document.querySelectorAll(".video").forEach((el) => {
     img.src = embed.thumb;
     img.alt = "";
     img.loading = "lazy";
+    img.onerror = () => img.remove();
     const btn = document.createElement("button");
     btn.className = "play";
     btn.type = "button";
     btn.setAttribute("aria-label", `Reproducir: ${title}`);
-    btn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>`;
+    btn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><em></em>`;
+    btn.querySelector("em").textContent = title;
     btn.addEventListener("click", () => el.replaceChildren(iframe(embed.iframe, title)), { once: true });
     el.append(img, btn);
   } else {
     el.append(iframe(embed.iframe, title));
   }
+});
+
+// "Ver más": cada fila con data-limit muestra solo los primeros videos
+document.querySelectorAll("[data-limit]").forEach((row) => {
+  const extra = [...row.children].slice(Number(row.dataset.limit));
+  if (!extra.length) return;
+  extra.forEach((el) => el.setAttribute("data-extra", ""));
+  const btn = document.createElement("button");
+  btn.className = "more";
+  btn.type = "button";
+  btn.textContent = `Ver ${extra.length} más`;
+  btn.addEventListener("click", () => {
+    extra.forEach((el) => el.removeAttribute("data-extra"));
+    btn.remove();
+  });
+  row.after(btn);
 });
 
 // Pestañas de nichos (con flechas del teclado)
