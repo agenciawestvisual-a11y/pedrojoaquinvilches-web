@@ -9,6 +9,7 @@ Es un sitio estático (HTML, CSS y JS, sin build), listo para publicar en GitHub
 - `index.html`: contenido y textos.
 - `styles.css`: diseño estilo Apple, negro como primario y azul como secundario.
 - `main.js`: reproductores de video y pestañas de nichos.
+- `bg.js`: fondo animado en negro y azul (WebGL liviano; queda quieto si el sistema pide reducir movimiento).
 - `assets/`: logo y favicon.
 
 ## Cómo cargar un video

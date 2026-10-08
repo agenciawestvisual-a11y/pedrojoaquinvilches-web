@@ -31,6 +31,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Fondo animado (bg.js). Sin WebGL queda este degradé quieto. */
+#bg {
+  position: fixed; inset: 0; z-index: -1;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: radial-gradient(90% 70% at 50% 25%, #0a2a66 0%, #04122e 45%, #000 80%);
+}
+
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 h1, h2, h3 { margin: 0; font-weight: 600; text-wrap: balance; }
@@ -95,7 +103,7 @@ main { padding-inline: var(--gutter); }
   line-height: 1.02;
   letter-spacing: -.045em;
 }
-.hero .lede { font-size: clamp(19px, 2.2vw, 24px); line-height: 1.35; color: var(--muted); max-width: 32ch; font-weight: 500; }
+.hero .lede { font-size: clamp(19px, 2.2vw, 24px); line-height: 1.35; color: #c7c7cc; max-width: 32ch; font-weight: 500; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 28px; margin-top: 12px; }
 .hero-reel { width: 100%; margin-top: clamp(40px, 6vw, 64px); }
 
